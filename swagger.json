@@ -1,0 +1,20 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "BookClub API",
+      "version": "1.0.0",
+      "description": "API documentation for BookClub application"
+    },
+    "paths": {
+      "/books": {
+        "get": {
+          "summary": "Get all books",
+          "responses": {
+            "200": {
+              "description": "A list of books"
+            }
+          }
+        }
+      }
+    }
+  }

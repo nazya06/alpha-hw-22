@@ -1,0 +1,85 @@
+### USERS
+
+# 🔍 Получить всех пользователей
+GET http://localhost:3000/users
+Content-Type: application/json
+
+###
+
+# ➕ Создать пользователя
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+###
+
+# 🛠 Обновить пользователя (замени :id на реальный ID)
+PATCH http://localhost:3000/users/:id
+Content-Type: application/json
+
+{
+  "name": "Alice Updated"
+}
+
+###
+
+# ❌ Удалить пользователя (замени :id на реальный ID)
+DELETE http://localhost:3000/users/:id
+Content-Type: application/json
+
+
+### BOOKS
+
+# 📚 Получить все книги
+GET http://localhost:3000/books
+Content-Type: application/json
+
+###
+
+# ➕ Создать книгу (замени USER_ID на id пользователя)
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Node.js in Practice",
+  "author": "USER_ID"
+}
+
+###
+
+# 🛠 Обновить книгу (замени :id на реальный ID)
+PATCH http://localhost:3000/books/:id
+Content-Type: application/json
+
+{
+  "title": "Updated Book Title"
+}
+
+###
+
+# ❌ Удалить книгу
+DELETE http://localhost:3000/books/:id
+Content-Type: application/json
+
+
+### REVIEWS
+
+# ➕ Добавить отзыв (замени :bookId на ID книги)
+POST http://localhost:3000/reviews/:bookId
+Content-Type: application/json
+
+{
+  "reviewerName": "John Doe",
+  "rating": 5,
+  "comment": "Excellent book!"
+}
+
+###
+
+# ❌ Удалить отзыв (замени :bookId и :reviewId на реальные значения)
+DELETE http://localhost:3000/reviews/:bookId/:reviewId
+Content-Type: application/json
